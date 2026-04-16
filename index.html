@@ -80,23 +80,24 @@
     .nav-links a:hover,
     .footer a:hover,
     .link:hover,
-    .cert-link:hover {
+    .cert-link:hover,
+    .contact-item:hover {
       color: var(--glt);
     }
 
     section {
       max-width: 920px;
       margin: 0 auto;
-      padding: 3.5rem 1.4rem;
+      padding: 2.4rem 1.4rem;
     }
 
     #hero {
-      min-height: 100vh;
+      min-height: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-top: 5.5rem;
-      padding-bottom: 2.5rem;
+      padding-top: 6.2rem;
+      padding-bottom: 1.2rem;
     }
 
     .eyebrow {
@@ -105,14 +106,14 @@
       letter-spacing: .22em;
       color: var(--gold);
       text-transform: uppercase;
-      margin-bottom: .9rem;
+      margin-bottom: .7rem;
     }
 
     h1 {
       font-family: var(--serif);
       font-size: clamp(2.8rem, 7vw, 4.5rem);
       line-height: 1;
-      margin-bottom: .7rem;
+      margin-bottom: .45rem;
     }
 
     h1 em {
@@ -124,7 +125,7 @@
       font-family: var(--serif);
       font-size: 1rem;
       color: var(--mist);
-      margin-bottom: .9rem;
+      margin-bottom: .7rem;
     }
 
     .desc {
@@ -132,7 +133,7 @@
       font-size: .95rem;
       line-height: 1.8;
       color: var(--mist);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     .chips,
@@ -165,7 +166,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: .75rem;
-      margin-top: 1.3rem;
+      margin-top: 1rem;
     }
 
     .btn {
@@ -192,39 +193,45 @@
       color: var(--glt);
     }
 
+    #projects {
+      padding-top: 1.2rem;
+    }
+
     .section-label {
       font-family: var(--mono);
       font-size: .62rem;
       letter-spacing: .22em;
       color: var(--gold);
       text-transform: uppercase;
-      margin-bottom: .45rem;
+      margin-bottom: .35rem;
     }
 
     h2 {
       font-family: var(--serif);
       font-size: clamp(1.7rem, 4vw, 2.2rem);
-      margin-bottom: 1.15rem;
+      margin-bottom: .8rem;
     }
 
     .section-box {
       background: var(--panel);
       border: 1px solid rgba(201,168,76,.12);
-      padding: 1.4rem;
+      border-top: 2px solid rgba(201,168,76,.65);
+      padding: 1.35rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,.14);
     }
 
     .project-list,
     .cert-grid {
       display: grid;
-      gap: 1rem;
-      margin-top: .8rem;
+      gap: .9rem;
+      margin-top: .65rem;
     }
 
     .project,
     .cert-card {
       background: var(--deep);
       border: 1px solid rgba(255,255,255,.06);
-      padding: 1.15rem;
+      padding: 1.1rem;
     }
 
     .project {
@@ -262,8 +269,7 @@
     }
 
     .project h3,
-    .cert-card h3,
-    .skill-box h3 {
+    .cert-card h3 {
       font-family: var(--serif);
       font-size: 1.05rem;
     }
@@ -329,7 +335,7 @@
     }
 
     #contact {
-      padding-top: 3rem;
+      padding-top: 2.4rem;
       border-top: 1px solid rgba(201,168,76,.1);
     }
 
@@ -345,6 +351,7 @@
       padding: .9rem 1rem;
       background: var(--panel);
       border: 1px solid rgba(255,255,255,.06);
+      transition: color .2s ease;
     }
 
     .contact-label {
@@ -374,15 +381,33 @@
 
     @media (max-width: 700px) {
       .nav-links { display: none; }
-      section { padding: 2.7rem 1.2rem; }
-      #hero { padding-top: 5rem; }
+
+      section {
+        padding: 2rem 1.2rem;
+      }
+
+      #hero {
+        padding-top: 5.6rem;
+        padding-bottom: 1rem;
+      }
+
+      #projects {
+        padding-top: 1rem;
+      }
+
       .skills-grid,
-      .cert-grid { grid-template-columns: 1fr; }
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+
       .footer {
         padding: 0 1.2rem 1.4rem;
         flex-direction: column;
       }
-      .section-box { padding: 1rem; }
+
+      .section-box {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -413,7 +438,7 @@
     </div>
     <div class="actions">
       <a class="btn btn-primary" href="#projects">View Projects</a>
-      <a class="btn btn-secondary" href="https://github.com/evaxdata" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn btn-secondary" href="https://evaxdata.github.io/" target="_blank" rel="noopener">Website ↗</a>
       <a class="btn btn-secondary" href="#contact">Contact</a>
     </div>
   </section>
@@ -571,19 +596,19 @@
     <div class="section-label">Contact</div>
     <h2>Let’s Connect</h2>
     <div class="contact-list">
-      <a class="contact-item" href="mailto:hello@evaxdata.com">
-        <div class="contact-label">Email</div>
-        <div>hello@evaxdata.com</div>
-      </a>
-
       <a class="contact-item" href="https://github.com/evaxdata" target="_blank" rel="noopener">
         <div class="contact-label">GitHub</div>
         <div>github.com/evaxdata</div>
       </a>
 
-      <a class="contact-item" href="https://linkedin.com" target="_blank" rel="noopener">
+      <a class="contact-item" href="https://www.linkedin.com/in/linda-eva-seuna/" target="_blank" rel="noopener">
         <div class="contact-label">LinkedIn</div>
-        <div>Connect on LinkedIn</div>
+        <div>linkedin.com/in/linda-eva-seuna</div>
+      </a>
+
+      <a class="contact-item" href="https://evaxdata.github.io/" target="_blank" rel="noopener">
+        <div class="contact-label">Website</div>
+        <div>evaxdata.github.io</div>
       </a>
     </div>
   </section>
@@ -593,4 +618,4 @@
     <div><a href="#hero">Back to top ↑</a></div>
   </div>
 </body>
-        </html>
+                                           </html>
