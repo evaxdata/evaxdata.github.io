@@ -14,6 +14,7 @@
     :root {
       --ink: #0a0e1a;
       --deep: #0f1629;
+      --panel: #10182c;
       --gold: #c9a84c;
       --glt: #e8c97a;
       --cream: #f5f0e8;
@@ -32,6 +33,7 @@
       color: var(--cream);
       font-family: var(--sans);
       font-weight: 300;
+      line-height: 1.6;
     }
 
     nav {
@@ -42,7 +44,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 1rem 1.4rem;
-      background: rgba(10,14,26,.95);
+      background: rgba(10,14,26,.94);
       border-bottom: 1px solid rgba(201,168,76,.12);
     }
 
@@ -83,9 +85,9 @@
     }
 
     section {
-      max-width: 860px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 5rem 1.4rem;
+      padding: 3.5rem 1.4rem;
     }
 
     #hero {
@@ -93,6 +95,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding-top: 5.5rem;
+      padding-bottom: 2.5rem;
     }
 
     .eyebrow {
@@ -101,14 +105,14 @@
       letter-spacing: .22em;
       color: var(--gold);
       text-transform: uppercase;
-      margin-bottom: 1rem;
+      margin-bottom: .9rem;
     }
 
     h1 {
       font-family: var(--serif);
       font-size: clamp(2.8rem, 7vw, 4.5rem);
       line-height: 1;
-      margin-bottom: .8rem;
+      margin-bottom: .7rem;
     }
 
     h1 em {
@@ -120,7 +124,7 @@
       font-family: var(--serif);
       font-size: 1rem;
       color: var(--mist);
-      margin-bottom: 1rem;
+      margin-bottom: .9rem;
     }
 
     .desc {
@@ -128,7 +132,7 @@
       font-size: .95rem;
       line-height: 1.8;
       color: var(--mist);
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.2rem;
     }
 
     .chips,
@@ -146,7 +150,7 @@
       font-size: .56rem;
       letter-spacing: .08em;
       text-transform: uppercase;
-      padding: .25rem .6rem;
+      padding: .28rem .6rem;
       border: 1px solid rgba(255,255,255,.12);
       color: var(--cream);
     }
@@ -161,7 +165,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: .75rem;
-      margin-top: 1.5rem;
+      margin-top: 1.3rem;
     }
 
     .btn {
@@ -182,6 +186,7 @@
     }
 
     .btn-primary:hover { background: var(--glt); }
+
     .btn-secondary:hover {
       border-color: var(--gold);
       color: var(--glt);
@@ -193,40 +198,47 @@
       letter-spacing: .22em;
       color: var(--gold);
       text-transform: uppercase;
-      margin-bottom: .5rem;
+      margin-bottom: .45rem;
     }
 
     h2 {
       font-family: var(--serif);
-      font-size: clamp(1.7rem, 4vw, 2.3rem);
-      margin-bottom: 1.5rem;
+      font-size: clamp(1.7rem, 4vw, 2.2rem);
+      margin-bottom: 1.15rem;
+    }
+
+    .section-box {
+      background: var(--panel);
+      border: 1px solid rgba(201,168,76,.12);
+      padding: 1.4rem;
     }
 
     .project-list,
     .cert-grid {
       display: grid;
-      gap: 1px;
-      background: rgba(201,168,76,.08);
-      margin-top: 1.2rem;
+      gap: 1rem;
+      margin-top: .8rem;
     }
 
     .project,
     .cert-card {
       background: var(--deep);
-      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,.06);
+      padding: 1.15rem;
     }
 
     .project {
       display: flex;
       flex-direction: column;
-      gap: .75rem;
+      gap: .7rem;
     }
 
-    .project-top {
+    .project-top,
+    .cert-title-row {
       display: flex;
       justify-content: space-between;
       gap: 1rem;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .project-type {
@@ -237,16 +249,23 @@
       color: var(--blue);
     }
 
-    .year {
+    .year,
+    .cert-year {
       font-family: var(--mono);
       font-size: .54rem;
       color: var(--mist);
+      white-space: nowrap;
+    }
+
+    .cert-year {
+      color: var(--gold);
     }
 
     .project h3,
-    .cert-card h3 {
+    .cert-card h3,
+    .skill-box h3 {
       font-family: var(--serif);
-      font-size: 1.15rem;
+      font-size: 1.05rem;
     }
 
     .project p,
@@ -268,15 +287,15 @@
     }
 
     .skills-copy {
+      margin-bottom: .95rem;
       max-width: 680px;
-      margin-bottom: 1.2rem;
     }
 
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: .9rem;
-      margin-top: 1rem;
+      margin-top: .6rem;
     }
 
     .skill-box {
@@ -306,35 +325,26 @@
     .cert-card {
       display: flex;
       flex-direction: column;
-      gap: .6rem;
-    }
-
-    .cert-title-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      align-items: start;
-    }
-
-    .cert-year {
-      font-family: var(--mono);
-      font-size: .54rem;
-      color: var(--gold);
-      white-space: nowrap;
+      gap: .55rem;
     }
 
     #contact {
+      padding-top: 3rem;
       border-top: 1px solid rgba(201,168,76,.1);
     }
 
     .contact-list {
       display: grid;
-      gap: .9rem;
+      gap: .8rem;
+      margin-top: .5rem;
     }
 
     .contact-item {
       color: var(--cream);
       text-decoration: none;
+      padding: .9rem 1rem;
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,.06);
     }
 
     .contact-label {
@@ -344,13 +354,13 @@
       text-transform: uppercase;
       color: var(--mist);
       opacity: .65;
-      margin-bottom: .2rem;
+      margin-bottom: .18rem;
     }
 
     .footer {
-      max-width: 860px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 0 1.4rem 2rem;
+      padding: 0 1.4rem 1.8rem;
       display: flex;
       justify-content: space-between;
       gap: 1rem;
@@ -364,13 +374,15 @@
 
     @media (max-width: 700px) {
       .nav-links { display: none; }
-      section { padding: 4.2rem 1.2rem; }
+      section { padding: 2.7rem 1.2rem; }
+      #hero { padding-top: 5rem; }
       .skills-grid,
       .cert-grid { grid-template-columns: 1fr; }
       .footer {
-        padding: 0 1.2rem 1.6rem;
+        padding: 0 1.2rem 1.4rem;
         flex-direction: column;
       }
+      .section-box { padding: 1rem; }
     }
   </style>
 </head>
@@ -409,99 +421,103 @@
   <section id="projects">
     <div class="section-label">Portfolio</div>
     <h2>Selected Projects</h2>
-    <div class="project-list">
-      <article class="project">
-        <div class="project-top">
-          <span class="project-type">Analysis</span>
-          <span class="year">2024</span>
-        </div>
-        <h3>Project Title One</h3>
-        <p>Brief description of the problem, your approach, and the result or insight delivered.</p>
-        <div class="tags">
-          <span class="tag">SQL</span>
-          <span class="tag">Python</span>
-          <span class="tag">Pandas</span>
-        </div>
-        <a class="link" href="https://github.com/evaxdata" target="_blank" rel="noopener">View on GitHub →</a>
-      </article>
+    <div class="section-box">
+      <div class="project-list">
+        <article class="project">
+          <div class="project-top">
+            <span class="project-type">Analysis</span>
+            <span class="year">2024</span>
+          </div>
+          <h3>Project Title One</h3>
+          <p>Brief description of the problem, your approach, and the result or insight delivered.</p>
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+          </div>
+          <a class="link" href="https://github.com/evaxdata" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
 
-      <article class="project">
-        <div class="project-top">
-          <span class="project-type">Dashboard</span>
-          <span class="year">2024</span>
-        </div>
-        <h3>Project Title Two</h3>
-        <p>Brief description of the dashboard, the metrics tracked, and the decision it supports.</p>
-        <div class="tags">
-          <span class="tag">Power BI</span>
-          <span class="tag">DAX</span>
-          <span class="tag">Excel</span>
-        </div>
-        <a class="link" href="https://github.com/evaxdata" target="_blank" rel="noopener">View on GitHub →</a>
-      </article>
+        <article class="project">
+          <div class="project-top">
+            <span class="project-type">Dashboard</span>
+            <span class="year">2024</span>
+          </div>
+          <h3>Project Title Two</h3>
+          <p>Brief description of the dashboard, the metrics tracked, and the decision it supports.</p>
+          <div class="tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Excel</span>
+          </div>
+          <a class="link" href="https://github.com/evaxdata" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
 
-      <article class="project">
-        <div class="project-top">
-          <span class="project-type">Data Ops</span>
-          <span class="year">2023</span>
-        </div>
-        <h3>Project Title Three</h3>
-        <p>Brief description of the workflow, documentation, or process improvement you contributed to.</p>
-        <div class="tags">
-          <span class="tag">Excel</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Privacy</span>
-        </div>
-        <a class="link" href="https://github.com/evaxdata" target="_blank" rel="noopener">View on GitHub →</a>
-      </article>
+        <article class="project">
+          <div class="project-top">
+            <span class="project-type">Data Ops</span>
+            <span class="year">2023</span>
+          </div>
+          <h3>Project Title Three</h3>
+          <p>Brief description of the workflow, documentation, or process improvement you contributed to.</p>
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Privacy</span>
+          </div>
+          <a class="link" href="https://github.com/evaxdata" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+      </div>
     </div>
   </section>
 
   <section id="skills">
     <div class="section-label">Skills</div>
     <h2>Tools & Skills</h2>
-    <p class="skills-copy">
-      A simple overview of the tools and strengths I am building through coursework, projects, and hands-on practice.
-    </p>
+    <div class="section-box">
+      <p class="skills-copy">
+        A simple overview of the tools and strengths I am building through coursework, projects, and hands-on practice.
+      </p>
 
-    <div class="skills-grid">
-      <div class="skill-box">
-        <h3>Data Analysis</h3>
-        <div class="skill-tags">
-          <span class="skill-pill">SQL</span>
-          <span class="skill-pill">Excel</span>
-          <span class="skill-pill">Power Query</span>
-          <span class="skill-pill">Data Cleaning</span>
-          <span class="skill-pill">Reporting</span>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Data Analysis</h3>
+          <div class="skill-tags">
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">Excel</span>
+            <span class="skill-pill">Power Query</span>
+            <span class="skill-pill">Data Cleaning</span>
+            <span class="skill-pill">Reporting</span>
+          </div>
         </div>
-      </div>
 
-      <div class="skill-box">
-        <h3>BI & Visualization</h3>
-        <div class="skill-tags">
-          <span class="skill-pill">Power BI</span>
-          <span class="skill-pill">DAX</span>
-          <span class="skill-pill">Dashboards</span>
-          <span class="skill-pill">Tableau</span>
+        <div class="skill-box">
+          <h3>BI & Visualization</h3>
+          <div class="skill-tags">
+            <span class="skill-pill">Power BI</span>
+            <span class="skill-pill">DAX</span>
+            <span class="skill-pill">Dashboards</span>
+            <span class="skill-pill">Tableau</span>
+          </div>
         </div>
-      </div>
 
-      <div class="skill-box">
-        <h3>Programming</h3>
-        <div class="skill-tags">
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">Pandas</span>
-          <span class="skill-pill">Data Wrangling</span>
+        <div class="skill-box">
+          <h3>Programming</h3>
+          <div class="skill-tags">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">Data Wrangling</span>
+          </div>
         </div>
-      </div>
 
-      <div class="skill-box">
-        <h3>Governance</h3>
-        <div class="skill-tags">
-          <span class="skill-pill">Data Governance</span>
-          <span class="skill-pill">Documentation</span>
-          <span class="skill-pill">Privacy</span>
-          <span class="skill-pill">PIPEDA</span>
+        <div class="skill-box">
+          <h3>Governance</h3>
+          <div class="skill-tags">
+            <span class="skill-pill">Data Governance</span>
+            <span class="skill-pill">Documentation</span>
+            <span class="skill-pill">Privacy</span>
+            <span class="skill-pill">PIPEDA</span>
+          </div>
         </div>
       </div>
     </div>
@@ -510,43 +526,44 @@
   <section id="certifications">
     <div class="section-label">Credentials</div>
     <h2>Certifications</h2>
+    <div class="section-box">
+      <div class="cert-grid">
+        <article class="cert-card">
+          <div class="cert-title-row">
+            <h3>Business Analytics</h3>
+            <span class="cert-year">In Progress</span>
+          </div>
+          <p class="cert-meta">Seneca College · Canada</p>
+          <a class="cert-link" href="#" target="_blank" rel="noopener">Add link →</a>
+        </article>
 
-    <div class="cert-grid">
-      <article class="cert-card">
-        <div class="cert-title-row">
-          <h3>Business Analytics</h3>
-          <span class="cert-year">In Progress</span>
-        </div>
-        <p class="cert-meta">Seneca College · Canada</p>
-        <a class="cert-link" href="#" target="_blank" rel="noopener">Add link →</a>
-      </article>
+        <article class="cert-card">
+          <div class="cert-title-row">
+            <h3>Google Data Analytics</h3>
+            <span class="cert-year">2022</span>
+          </div>
+          <p class="cert-meta">Google · Coursera</p>
+          <a class="cert-link" href="#" target="_blank" rel="noopener">Add link →</a>
+        </article>
 
-      <article class="cert-card">
-        <div class="cert-title-row">
-          <h3>Google Data Analytics</h3>
-          <span class="cert-year">2022</span>
-        </div>
-        <p class="cert-meta">Google · Coursera</p>
-        <a class="cert-link" href="#" target="_blank" rel="noopener">Add link →</a>
-      </article>
+        <article class="cert-card">
+          <div class="cert-title-row">
+            <h3>Python for Data Science</h3>
+            <span class="cert-year">2023</span>
+          </div>
+          <p class="cert-meta">IBM · Coursera</p>
+          <a class="cert-link" href="#" target="_blank" rel="noopener">Add link →</a>
+        </article>
 
-      <article class="cert-card">
-        <div class="cert-title-row">
-          <h3>Python for Data Science</h3>
-          <span class="cert-year">2023</span>
-        </div>
-        <p class="cert-meta">IBM · Coursera</p>
-        <a class="cert-link" href="#" target="_blank" rel="noopener">Add link →</a>
-      </article>
-
-      <article class="cert-card">
-        <div class="cert-title-row">
-          <h3>Power BI Data Analyst</h3>
-          <span class="cert-year">2023</span>
-        </div>
-        <p class="cert-meta">Microsoft · PL-300</p>
-        <a class="cert-link" href="#" target="_blank" rel="noopener">Add link →</a>
-      </article>
+        <article class="cert-card">
+          <div class="cert-title-row">
+            <h3>Power BI Data Analyst</h3>
+            <span class="cert-year">2023</span>
+          </div>
+          <p class="cert-meta">Microsoft · PL-300</p>
+          <a class="cert-link" href="#" target="_blank" rel="noopener">Add link →</a>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -576,4 +593,4 @@
     <div><a href="#hero">Back to top ↑</a></div>
   </div>
 </body>
-  </html>
+        </html>
