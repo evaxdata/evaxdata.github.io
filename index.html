@@ -221,34 +221,39 @@
     }
 
     .project-list,
-    .cert-grid {
+    .cert-grid,
+    .exp-list {
       display: grid;
       gap: .9rem;
       margin-top: .65rem;
     }
 
     .project,
-    .cert-card {
+    .cert-card,
+    .exp-item {
       background: var(--deep);
       border: 1px solid rgba(255,255,255,.06);
       padding: 1.1rem;
     }
 
-    .project {
+    .project,
+    .exp-item {
       display: flex;
       flex-direction: column;
       gap: .7rem;
     }
 
     .project-top,
-    .cert-title-row {
+    .cert-title-row,
+    .exp-top {
       display: flex;
       justify-content: space-between;
       gap: 1rem;
       align-items: flex-start;
     }
 
-    .project-type {
+    .project-type,
+    .exp-role {
       font-family: var(--mono);
       font-size: .54rem;
       letter-spacing: .12em;
@@ -257,7 +262,8 @@
     }
 
     .year,
-    .cert-year {
+    .cert-year,
+    .exp-year {
       font-family: var(--mono);
       font-size: .54rem;
       color: var(--mist);
@@ -269,14 +275,25 @@
     }
 
     .project h3,
-    .cert-card h3 {
+    .cert-card h3,
+    .exp-item h3 {
       font-family: var(--serif);
       font-size: 1.05rem;
     }
 
+    .exp-company {
+      font-family: var(--mono);
+      font-size: .6rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: -.3rem;
+    }
+
     .project p,
     .cert-meta,
-    .skills-copy {
+    .skills-copy,
+    .exp-item p {
       color: var(--mist);
       line-height: 1.75;
       font-size: .88rem;
@@ -416,6 +433,7 @@
     <a class="nav-logo" href="#hero">evaxdata portfolio</a>
     <ul class="nav-links">
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -495,6 +513,59 @@
     </div>
   </section>
 
+  <section id="experience">
+    <div class="section-label">Experience</div>
+    <h2>Professional Journey</h2>
+    <div class="section-box">
+      <div class="exp-list">
+        <article class="exp-item">
+          <div class="exp-top">
+            <span class="exp-role">Role / Title</span>
+            <span class="exp-year">Month YYYY — Present</span>
+          </div>
+          <h3>Position Title</h3>
+          <p class="exp-company">Company Name · Location</p>
+          <p>Brief summary of what you did, the tools or data you worked with, and the measurable impact of your work.</p>
+          <div class="tags">
+            <span class="tag">Tool</span>
+            <span class="tag">Tool</span>
+            <span class="tag">Tool</span>
+          </div>
+        </article>
+
+        <article class="exp-item">
+          <div class="exp-top">
+            <span class="exp-role">Role / Title</span>
+            <span class="exp-year">Month YYYY — Month YYYY</span>
+          </div>
+          <h3>Position Title</h3>
+          <p class="exp-company">Company Name · Location</p>
+          <p>Brief summary of responsibilities, the scope of work, and any outcomes, deliverables, or recognition received.</p>
+          <div class="tags">
+            <span class="tag">Tool</span>
+            <span class="tag">Tool</span>
+            <span class="tag">Tool</span>
+          </div>
+        </article>
+
+        <article class="exp-item">
+          <div class="exp-top">
+            <span class="exp-role">Role / Title</span>
+            <span class="exp-year">Month YYYY — Month YYYY</span>
+          </div>
+          <h3>Position Title</h3>
+          <p class="exp-company">Company Name · Location</p>
+          <p>Brief summary of what you contributed, the team or context you worked in, and what you learned or built.</p>
+          <div class="tags">
+            <span class="tag">Tool</span>
+            <span class="tag">Tool</span>
+            <span class="tag">Tool</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="skills">
     <div class="section-label">Skills</div>
     <h2>Tools & Skills</h2>
@@ -524,59 +595,6 @@
             <span class="skill-pill">Tableau</span>
           </div>
         </div>
-
-        <section id="experience">
-    <div class="section-label">Experience</div>
-    <h2>Professional Journey</h2>
-    <div class="section-box">
-      <div class="exp-list">
-        <article class="exp-item">
-          <div class="exp-top">
-            <span class="exp-role">Role / Title</span>
-            <span class="exp-year">Month YYYY — Present</span>
-          </div>
-          <h3>Position Title</h3>
-          <p class="exp-company">Company Name · Location</p>
-          <p>Brief summary of what you did, the tools or data you worked with, and the measurable impact of your work.</p>
-          <div class="tags">
-            <span class="tag">Tool</span>
-            <span class="tag">Tool</span>
-            <span class="tag">Tool</span>
-          </div>
-        </article>
- 
-        <article class="exp-item">
-          <div class="exp-top">
-            <span class="exp-role">Role / Title</span>
-            <span class="exp-year">Month YYYY — Month YYYY</span>
-          </div>
-          <h3>Position Title</h3>
-          <p class="exp-company">Company Name · Location</p>
-          <p>Brief summary of responsibilities, the scope of work, and any outcomes, deliverables, or recognition received.</p>
-          <div class="tags">
-            <span class="tag">Tool</span>
-            <span class="tag">Tool</span>
-            <span class="tag">Tool</span>
-          </div>
-        </article>
- 
-        <article class="exp-item">
-          <div class="exp-top">
-            <span class="exp-role">Role / Title</span>
-            <span class="exp-year">Month YYYY — Month YYYY</span>
-          </div>
-          <h3>Position Title</h3>
-          <p class="exp-company">Company Name · Location</p>
-          <p>Brief summary of what you contributed, the team or context you worked in, and what you learned or built.</p>
-          <div class="tags">
-            <span class="tag">Tool</span>
-            <span class="tag">Tool</span>
-            <span class="tag">Tool</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
 
         <div class="skill-box">
           <h3>Programming</h3>
@@ -646,7 +664,7 @@
 
   <section id="contact">
     <div class="section-label">Contact</div>
-    <h2>Let’s Connect</h2>
+    <h2>Let's Connect</h2>
     <div class="contact-list">
       <a class="contact-item" href="https://github.com/evaxdata" target="_blank" rel="noopener">
         <div class="contact-label">GitHub</div>
@@ -666,8 +684,8 @@
   </section>
 
   <div class="footer">
-    <div>© 2026 Linda Eva Seuna</div>
+    <div>© 2026 - Made with ♡ by evaxdata</div>
     <div><a href="#hero">Back to top ↑</a></div>
   </div>
 </body>
-                                           </html>
+</html>
