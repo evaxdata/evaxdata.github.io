@@ -12,26 +12,26 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* Backgrounds — warm, soft whites */
-      --bg: #fbf8f2;           /* page: warm off-white with a whisper of gold */
+      /* Backgrounds — clean white with soft peach panels */
+      --bg: #ffffff;           /* page: pure white */
       --surface: #ffffff;      /* section boxes: clean white */
-      --panel: #f5ecd9;        /* nested cards: soft champagne */
+      --panel: #fbe8d4;        /* nested cards: soft peach */
 
       /* Text — deep warm brown-charcoal, professional not black */
-      --ink: #2a2118;          /* primary text */
-      --ink-soft: #6b5d4a;     /* secondary text */
-      --muted: #9b8d75;        /* meta / timestamps */
+      --ink: #2a1f18;          /* primary text */
+      --ink-soft: #6b5244;     /* secondary text */
+      --muted: #9b8375;        /* meta / timestamps */
 
-      /* Accents — gold family, grounded */
-      --rose: #b8892b;         /* primary accent: warm gold */
-      --rose-deep: #8a6418;    /* hover / emphasis */
-      --blush: #e8cf8a;        /* soft accent: champagne */
-      --mauve: #8a6a3a;        /* secondary accent for tags: bronze */
-      --sage: #7a8a5c;         /* "open to work" chip — complementary olive-sage */
+      /* Accents — orange family, grounded */
+      --rose: #d87229;         /* primary accent: warm orange */
+      --rose-deep: #a84f14;    /* hover / emphasis: burnt orange */
+      --blush: #f5c89a;        /* soft accent: light peach */
+      --mauve: #a85a28;        /* secondary accent for tags: terracotta */
+      --sage: #6b8a5c;         /* "open to work" chip — complementary olive-sage */
 
       /* Lines */
-      --line: rgba(42, 33, 24, 0.08);
-      --line-strong: rgba(184, 137, 43, 0.3);
+      --line: rgba(42, 31, 24, 0.08);
+      --line-strong: rgba(216, 114, 41, 0.3);
 
       --mono: 'DM Mono', monospace;
       --serif: 'Playfair Display', Georgia, serif;
@@ -56,7 +56,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 1rem 1.4rem;
-      background: rgba(251, 248, 242, 0.92);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
@@ -176,8 +176,8 @@
 
     .chip {
       color: var(--sage);
-      border-color: rgba(122, 148, 120, 0.4);
-      background: rgba(122, 148, 120, 0.08);
+      border-color: rgba(107, 138, 92, 0.4);
+      background: rgba(107, 138, 92, 0.08);
     }
 
     .actions {
@@ -239,7 +239,7 @@
       border: 1px solid var(--line);
       border-top: 2px solid var(--rose);
       padding: 1.35rem;
-      box-shadow: 0 8px 24px rgba(184, 137, 43, 0.08);
+      box-shadow: 0 8px 24px rgba(216, 114, 41, 0.08);
       border-radius: 2px;
     }
 
@@ -264,7 +264,7 @@
     .cert-card:hover,
     .exp-item:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(184, 137, 43, 0.12);
+      box-shadow: 0 6px 16px rgba(216, 114, 41, 0.12);
     }
 
     .project,
